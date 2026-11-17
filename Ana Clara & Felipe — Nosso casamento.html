@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ana Clara & Felipe — Nosso casamento</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4ece4;--card:#fbf7f2;--field:#fff;--ink:#3e2a1e;--muted:#7d6455;--accent:#a47148;--line:#e0d0c0;--btn:#5a3825;--btnh:#3e2a1e;--btnt:#fff;
+--serif:"Bodoni Moda",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1510;--card:#2a1d16;--field:#35261d;--ink:#f3e8dd;--muted:#c4a995;--accent:#d1a27a;--line:#4a3629;--btn:#f3e8dd;--btnh:#fff;--btnt:#1f1510}}
+:root[data-theme="dark"]{--bg:#1f1510;--card:#2a1d16;--field:#35261d;--ink:#f3e8dd;--muted:#c4a995;--accent:#d1a27a;--line:#4a3629;--btn:#f3e8dd;--btnh:#fff;--btnt:#1f1510}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 60px)}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;padding:12px 24px;font-size:14px}
+nav a{text-decoration:none;color:var(--muted);white-space:nowrap}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{color:var(--ink);font-weight:500}
+.hero{text-align:center;padding:88px 0 72px}
+.hero h1{font:italic 500 clamp(52px,13vw,112px)/.95 var(--serif);letter-spacing:-.02em}
+.hero h1 span{display:block;font:500 .28em/1.6 var(--sans);font-style:normal;color:var(--accent)}
+.hero p{margin-top:28px;color:var(--muted)}
+.count{display:flex;justify-content:center;gap:clamp(10px,4vw,28px);margin-top:40px}
+.count b{display:block;font:500 clamp(32px,8vw,44px)/1 var(--serif)}
+.count small{color:var(--muted);font-size:clamp(12px,3.5vw,14px)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:500 36px/1.15 var(--serif);margin-bottom:20px}
+p+p{margin-top:14px}
+.muted{color:var(--muted)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin-top:20px}
+.tl{list-style:none;padding:0}
+.tl li{display:grid;grid-template-columns:74px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl time{font:500 22px var(--serif)}
+button,.btn{font:500 16px var(--sans);background:var(--btn);color:var(--btnt);border:0;border-radius:4px;padding:13px 22px;cursor:pointer;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{background:var(--btnh)}
+.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.ghost:hover{background:var(--line)}
+label{display:block;margin-top:16px;font-weight:500;font-size:15px}
+input,select,textarea{width:100%;margin-top:6px;padding:12px;font:inherit;background:var(--field);border:1px solid var(--line);border-radius:4px;color:var(--ink)}
+.pix{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.pix code{background:var(--field);border:1px solid var(--line);padding:10px 14px;border-radius:4px;word-break:break-all}
+.gifts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
+.gift{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.gift .v{font:500 24px var(--serif);color:var(--accent)}
+.gift button{margin-top:auto}
+.challenge-progress{margin-top:20px}
+.challenge-progress progress{width:100%;height:16px;accent-color:var(--accent)}
+.challenge-grid{display:grid;gap:16px;margin-top:20px}
+.challenge-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px}
+.challenge-card h3{font:500 24px/1.2 var(--serif)}
+.challenge-card p{color:var(--muted);margin-top:8px}
+.challenge-upload{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin-top:14px}
+.challenge-upload label{margin:0}
+.challenge-upload button{white-space:nowrap}
+.challenge-photo-preview{max-width:320px;margin-top:14px}
+.challenge-photo-preview[hidden]{display:none}
+.challenge-photo-preview img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;border:1px solid var(--line);border-radius:6px;background:var(--line)}
+.challenge-photo-preview figcaption{margin-top:5px;color:var(--muted);font-size:13px}
+.guest-collage{margin-top:28px;padding:24px;background:var(--card);border:2px solid var(--accent);border-radius:14px;box-shadow:0 12px 30px #3e2a1e18}
+.guest-collage[hidden]{display:none}
+.collage-header{text-align:center;padding:8px 0 18px;border-bottom:1px solid var(--line)}
+.collage-ornament{color:var(--accent);font-size:18px;letter-spacing:10px}
+.collage-kicker{margin-top:6px;color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.collage-title{margin-top:4px;color:var(--accent);font:italic 500 clamp(30px,8vw,46px)/1.1 var(--serif)}
+.collage-date{margin-top:8px;color:var(--muted);font-size:14px}
+.collage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px;margin-top:24px;padding:8px}
+.collage-item{min-width:0;padding:9px 9px 28px;background:#fff;border:1px solid #e7ddd4;border-radius:2px;box-shadow:0 5px 12px #3e2a1e30;text-align:center;transform:rotate(var(--polaroid-tilt,0deg))}
+.collage-grid figure:nth-child(7n+1){--polaroid-tilt:-4deg}
+.collage-grid figure:nth-child(7n+2){--polaroid-tilt:3deg}
+.collage-grid figure:nth-child(7n+3){--polaroid-tilt:-2deg}
+.collage-grid figure:nth-child(7n+4){--polaroid-tilt:4deg}
+.collage-grid figure:nth-child(7n+5){--polaroid-tilt:-3deg}
+.collage-grid figure:nth-child(7n+6){--polaroid-tilt:2deg}
+.collage-grid figure:nth-child(7n){--polaroid-tilt:-1deg}
+.collage-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:1px}
+.collage-item figcaption{margin-top:9px;color:#5a3825;font:italic 500 14px/1.2 var(--serif)}
+.collage-download{display:flex;justify-content:center;margin-top:24px}
+.collage-footer{margin-top:20px;text-align:center;color:var(--muted);font:italic 500 18px/1.4 var(--serif)}
+.memorial-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));align-items:start;gap:18px;margin-top:24px}
+.memorial-photo{min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:6px}
+.memorial-photo a{display:block;color:inherit;text-decoration:none}
+.memorial-photo img{display:block;width:auto;height:auto;max-width:100%;max-height:420px;object-fit:contain;margin:0 auto;background:var(--line)}
+.memorial-photo figcaption{padding:12px 14px;color:var(--muted);font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+.memorial-photo figcaption time{display:block;margin-top:3px;font-size:12px}
+.memorial-photo-error{display:grid;place-items:center;aspect-ratio:4/3;padding:16px;background:var(--line);color:var(--muted);text-align:center;font-size:14px}
+.memorial-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.memorial-actions button[hidden]{display:none}
+.photo-consent{display:flex;align-items:flex-start;gap:12px;margin-top:20px;padding:14px 16px;background:var(--card);border:2px solid var(--accent);border-radius:6px;color:var(--ink);font-size:16px;font-weight:600;line-height:1.45;cursor:pointer}
+.photo-consent input{flex:0 0 20px;width:20px;height:20px;margin:2px 0 0;padding:0;accent-color:var(--accent)}
+.challenge-status{min-height:1.6em}
+@media(max-width:520px){html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 112px)}nav .wrap{gap:6px 12px;padding:10px 24px}.challenge-upload{grid-template-columns:1fr}.challenge-upload button{width:100%}.collage-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px;padding:4px}}
+footer{text-align:center;padding:40px 0;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Seções"><div class="wrap">
+  <a href="#inicio">Início</a><a href="#historia">Nossa história</a><a href="#local">Local</a>
+  <a href="#memorial">Memorial</a><a href="#presentes">Presentes</a><a href="#desafios">Desafios da festa</a><a href="#rsvp">Confirmar presença</a>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+  <h1 id="nomes"></h1>
+  <p id="dataLocal"></p>
+  <div class="count" id="count" role="timer" aria-label="Contagem regressiva para o casamento"></div>
+</div></header>
+
+<main class="wrap">
+  <section id="historia"><h2>Nossa história</h2><div id="historiaTxt"></div></section>
+
+  <section id="memorial" aria-labelledby="memorialTitle">
+    <h2 id="memorialTitle">Memorial do nosso casamento</h2>
+    <p class="muted">As fotos da festa ficarão reunidas aqui. Este álbum é público e pode ser visto por qualquer visitante do site.</p>
+    <p class="muted challenge-status" id="weddingGalleryStatus" role="status" aria-live="polite">Carregando o memorial…</p>
+    <div class="memorial-gallery" id="weddingGallery"></div>
+    <div class="memorial-actions">
+      <button type="button" class="ghost" id="weddingGalleryRefresh">Atualizar memorial</button>
+      <button type="button" id="weddingGalleryLoadMore" hidden>Carregar mais fotos</button>
+    </div>
+  </section>
+
+  <section id="local"><h2>Local e traje</h2>
+    <div class="box"><p class="muted">Cerimônia</p><p><strong id="localNome"></strong></p><p class="muted" id="localEnd"></p>
+      <p style="margin-top:14px"><a class="btn ghost" id="mapa" target="_blank" rel="noopener">Abrir no mapa</a></p></div>
+    <div class="box"><p class="muted">Recepção</p><p>Após a cerimônia, os noivos receberão os convidados no <strong id="recNome"></strong></p><p class="muted" id="recEnd"></p>
+      <p style="margin-top:14px"><a class="btn ghost" id="recMapa" target="_blank" rel="noopener">Abrir no mapa</a></p></div>
+    <div class="box"><p><strong>Traje:</strong> <span id="traje"></span></p></div>
+  </section>
+
+  
+
+  <section id="presentes"><h2>Presentes</h2><p id="presentesTxt"></p>
+    <div id="gifts"></div>
+    <p class="muted" style="margin-top:28px">Prefere outro valor? Use a chave Pix:</p>
+    <div class="pix"><code id="pixKey"></code><button type="button" id="copiar">Copiar chave Pix</button></div>
+    <p class="muted" id="copiado" role="status" style="margin-top:10px"></p>
+  </section>
+
+  <section id="desafios"><h2>Seus desafios da festa</h2>
+    <div class="box" id="challengeLocked" role="status">Os desafios serão liberados somente no dia da festa.</div>
+    <div id="challengeContent" hidden>
+      <p>Entre com o nome informado na confirmação de presença para ver seus desafios individuais.</p>
+      <div class="box challenge-progress">
+        <p><strong id="collectiveProgressText">Carregando percentual coletivo…</strong></p>
+        <progress id="collectiveProgress" max="100" value="0" aria-label="Percentual coletivo dos desafios"></progress>
+      </div>
+      <div class="box" id="guestLoginBox">
+        <label for="guestLoginName">Nome completo usado na confirmação</label>
+        <input id="guestLoginName" autocomplete="name" maxlength="120">
+        <p style="margin-top:16px"><button type="button" id="guestLogin">Ver meus desafios</button></p>
+      </div>
+      <div id="guestDashboard" hidden>
+        <div class="box">
+          <p><strong id="guestWelcome"></strong></p>
+          <p id="guestProgressText"></p>
+          <progress id="guestProgress" max="100" value="0" aria-label="Seu progresso individual"></progress>
+          <p class="muted" style="margin-top:10px">Seu nome e suas fotos não serão exibidos aos outros convidados.</p>
+          <p style="margin-top:14px"><button type="button" class="ghost" id="guestLogout">Sair</button></p>
+        </div>
+        <label class="photo-consent"><input type="checkbox" id="photoConsent">
+          <span>Autorizo o envio da foto aos noivos para comprovar este desafio. Ela ficará privada no Google Drive; ao completar todos os desafios, minhas fotos aparecerão em uma colagem acessível pelo meu nome e não serão exibidas aos outros convidados.</span>
+        </label>
+        <p class="muted challenge-status" id="challengeStatus" role="status" aria-live="polite"></p>
+        <div class="challenge-grid" id="guestChallengeList"></div>
+        <section class="guest-collage" id="guestCollage" hidden aria-labelledby="guestCollageTitle">
+          <div class="collage-header">
+            <p class="collage-ornament" aria-hidden="true">✦ ♥ ✦</p>
+            <p class="collage-kicker">Uma lembrança da nossa festa</p>
+            <h3 class="collage-title" id="guestCollageTitle"></h3>
+            <p class="collage-date" id="guestCollageDate"></p>
+          </div>
+          <p class="muted challenge-status" id="guestCollageStatus" role="status" aria-live="polite"></p>
+          <div class="collage-grid" id="guestCollageGrid"></div>
+          <div class="collage-download"><button type="button" id="downloadGuestCollage">Baixar imagem para Stories</button></div>
+          <p class="collage-footer">Obrigado por fazer parte da nossa história.</p>
+        </section>
+      </div>
+      <p class="muted challenge-status" id="guestLoginStatus" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section id="rsvp"><h2>Confirmar presença</h2>
+    <p class="muted">Responda até <span id="prazo"></span>. Sua resposta será enviada à planilha dos noivos e abriremos o WhatsApp com a mensagem pronta.</p>
+    <div class="box">
+      <label for="nome">Seu nome</label><input id="nome" autocomplete="name" required maxlength="120">
+      <label for="vai">Você vai?</label>
+      <select id="vai" required><option>Sim, estarei lá</option><option>Infelizmente não poderei ir</option></select>
+      <label for="qtd">Quantas pessoas (contando você)?</label><input id="qtd" type="number" min="1" max="10" value="1" required>
+      <div id="acompanhantesField" hidden>
+        <label for="acompanhantes">Nome(s) do(s) acompanhante(s), um por linha</label>
+        <textarea id="acompanhantes" rows="3" maxlength="1000"></textarea>
+      </div>
+      <p style="margin-top:20px"><button type="button" id="enviar">Enviar confirmação</button></p>
+      <p class="muted" id="rsvpStatus" role="status" style="margin-top:10px"></p>
+    </div>
+  </section>
+</main>
+<footer>Feito com carinho por <span id="rodape"></span></footer>
+
+<script>
+/* ====== EDITE AQUI ====== */
+const C = {
+  noiva:"Ana Clara", noivo:"Felipe",
+  data:"2027-01-30T20:00:00-03:00", dataTexto:"30 de Janeiro de 2027, às 20h", cidade:"Brasília, DF",
+  historia:["Nossa história começou ainda na escola e, em 2016, nos apaixonamos. Desde então, vivemos encontros e desencontros, mas sempre encontramos novos motivos para escolher um ao outro. Crescemos, amadurecemos e acompanhamos cada fase da vida juntos. Desse amor nasceu nosso maior presente: a Lis.","Deus conduziu nossa história até aqui e agora vamos viver um dos capítulos mais especiais dela: dizer o nosso sim diante d’Ele e receber a graça do Sacramento do Matrimônio. Estamos felizes em compartilhar esse momento com vocês!"],
+  localNome:"Paróquia Nossa Senhora de Lourdes", localEnd:"Setor G Norte, Área Especial 25/27 – Taguatinga Norte, Brasília/DF",
+  recNome:"Recanto Oásis", recEnd:"Rua 10, Chácara 143 – Vicente Pires, Brasília/DF",
+  mapaUrl:"https://www.google.com/maps/search/?api=1&query=Paróquia+Nossa+Senhora+de+Lourdes+Setor+G+Norte+Taguatinga+Brasília",
+  traje:"Passeio completo",
+  pix:"casamentoanaefelipe2027@gmail.com", prazo:"15 de Janeiro de 2027",
+  infinitepay:{handle:"casamentoanaefelipe", redirectUrl:""},   // sua InfiniteTag sem o $; redirectUrl = página para onde o convidado volta após pagar (opcional)
+  googleSheetsWebAppUrl:"https://script.google.com/macros/s/AKfycbzbDu13U6wWq3Rbn0ttjHSSwIRUvzQ2_kWiPT6a-IsSWG8OAC1SAwuqaTmar3-I0vNFXw/exec",
+  presentes:[   // cada grupo: título e itens [nome, valor em R$]
+    {titulo:"🏡 Nossa casa", itens:[
+      ["Um mimo para decorar nossa casa",50],
+      ["Um toque especial para nossa sala",100],
+      ["Renovação dos utensílios da cozinha",150],
+      ["Uma roupa de cama nova",200],
+      ["Upgrade na decoração da casa",300],
+      ["Renovação dos móveis",500],
+      ["Upgrade nos eletrodomésticos",700],
+      ["Uma renovação especial para nosso cantinho",1000]
+    ]},
+    {titulo:"🌴 Nossa lua de mel", itens:[
+      ["Um brinde aos recém-casados",50],
+      ["Um café da manhã especial",100],
+      ["Um dia de descanso e piscina",150],
+      ["Um dia inteiro de praia",200],
+      ["Um jantar romântico",250],
+      ["Um passeio para conhecer novos lugares",300],
+      ["Uma massagem relaxante para o casal",350],
+      ["Um upgrade na nossa lua de mel",500],
+      ["Uma experiência especial na viagem",700],
+      ["Uma noite inesquecível na lua de mel",1000]
+    ]}
+  ],
+  whatsapp:"5561991064554"   // DDI + DDD + número, só dígitos
+};
+/* ======================== */
+const $=id=>document.getElementById(id);
+const CHALLENGES=[
+  {id:"selfie-noivos",title:"Selfie com os noivos",description:"Registre uma foto ao lado da Ana Clara e do Felipe — peça autorização antes."},
+  {id:"pista-danca",title:"Passo de dança",description:"Mostre seu passo mais animado na pista de dança."},
+  {id:"mesa-completa",title:"Mesa completa",description:"Reúna as pessoas da sua mesa para uma foto."},
+  {id:"brinde-amigos",title:"Brinde entre amigos",description:"Registre um brinde especial com seus amigos."},
+  {id:"tres-geracoes",title:"Três gerações",description:"Junte três gerações da família em uma foto."},
+  {id:"coracao-maos",title:"Coração com as mãos",description:"Forme um coração com as mãos junto de alguém da festa."},
+  {id:"nova-amizade",title:"Nova amizade",description:"Tire uma foto com alguém que você conheceu hoje — com consentimento."},
+  {id:"look-festa",title:"Look da festa",description:"Mostre um detalhe especial do seu look ou de um amigo, com autorização."},
+  {id:"danca-em-dupla",title:"Dança em dupla",description:"Convide alguém para dançar e registrem esse momento."},
+  {id:"sorriso-espontaneo",title:"Sorriso espontâneo",description:"Capture um momento alegre da festa, sempre respeitando quem aparece na foto."},
+  {id:"foto-com-familia",title:"Foto com a família",description:"Reúna familiares para uma foto alegre."},
+  {id:"pose-criativa",title:"Pose criativa",description:"Crie uma pose divertida com alguém da festa."},
+  {id:"brinde-especial",title:"Brinde especial",description:"Faça um brinde aos noivos e registre o momento."},
+  {id:"detalhe-decoracao",title:"Detalhe da decoração",description:"Fotografe um detalhe bonito da decoração."},
+  {id:"foto-com-amigo",title:"Foto com um amigo",description:"Registre a festa ao lado de um amigo querido."},
+  {id:"convite-danca",title:"Convite para dançar",description:"Convide alguém para dançar e tirem uma foto juntos."},
+  {id:"grupo-animado",title:"Grupo animado",description:"Monte um pequeno grupo e façam uma pose de comemoração."},
+  {id:"detalhe-bolo",title:"Detalhe da celebração",description:"Registre um detalhe especial da mesa ou da festa."},
+  {id:"passo-sincronizado",title:"Passo sincronizado",description:"Combine um passo de dança com alguém e registrem."},
+  {id:"foto-alegria",title:"Alegria da festa",description:"Registre um momento feliz, com autorização de quem aparece."}
+];
+const MAX_PHOTO_BYTES=1_000_000;
+const MAX_THUMBNAIL_BYTES=120_000;
+const CHALLENGE_EVENT_DATE="2026-11-16";
+let activeGuestName="";
+const challengePreviewUrls=new Map();
+let activeCollagePhotos=[];
+let weddingGalleryPageToken="";
+let weddingGalleryLoading=false;
+let loadedWeddingGalleryPhotoIds=new Set();
+
+function isChallengeEventDay(){
+  const parts=new Intl.DateTimeFormat("en-US",{
+    timeZone:"America/Sao_Paulo",year:"numeric",month:"2-digit",day:"2-digit"
+  }).formatToParts(new Date());
+  const date=Object.fromEntries(parts.filter(part=>part.type!=="literal").map(part=>[part.type,part.value]));
+  return `${date.year}-${date.month}-${date.day}`===CHALLENGE_EVENT_DATE;
+}
+
+function lockChallengeSection(message){
+  if(!$("challengeContent").hidden)logoutGuest();
+  $("challengeContent").hidden=true;
+  $("challengeLocked").hidden=false;
+  $("challengeLocked").textContent=message;
+}
+
+function showChallengeContent(){
+  $("challengeLocked").hidden=true;
+  $("challengeContent").hidden=false;
+}
+
+function challengeApiRequest(parameters){
+  return new Promise((resolve,reject)=>{
+    const callbackName=`__weddingChallenge_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const script=document.createElement("script");
+    const timeout=setTimeout(()=>finish(new Error("Tempo esgotado ao carregar os desafios.")),15000);
+    const finish=(error,data)=>{
+      clearTimeout(timeout);delete window[callbackName];script.remove();
+      if(error)reject(error);else resolve(data);
+    };
+    window[callbackName]=data=>finish(null,data);
+    script.onerror=()=>finish(new Error("Os desafios não responderam. Atualize o Apps Script e confirme que o app da Web está publicado para qualquer pessoa."));
+    const query=new URLSearchParams({...parameters,callback:callbackName,t:String(Date.now())});
+    script.src=`${C.googleSheetsWebAppUrl}?${query}`;
+    document.head.appendChild(script);
+  });
+}
+
+function createWeddingGalleryCard(photo){
+  const figure=document.createElement("figure");
+  figure.className="memorial-photo";
+  const link=document.createElement("a");
+  link.href=`https://drive.google.com/file/d/${encodeURIComponent(photo.id)}/view?usp=sharing`;
+  link.target="_blank";
+  link.rel="noopener noreferrer";
+  link.setAttribute("aria-label",`Abrir foto no Google Drive: ${photo.name}`);
+  const image=document.createElement("img");
+  image.src=`https://drive.google.com/thumbnail?id=${encodeURIComponent(photo.id)}&sz=w1600`;
+  image.alt=`Foto do casamento: ${photo.name}`;
+  image.loading="lazy";
+  image.decoding="async";
+  image.addEventListener("error",()=>{
+    const placeholder=document.createElement("p");
+    placeholder.className="memorial-photo-error";
+    placeholder.textContent="Prévia indisponível. Tente abrir a foto no Drive.";
+    image.replaceWith(placeholder);
+  },{once:true});
+  const caption=document.createElement("figcaption");
+  const name=document.createElement("span");
+  name.textContent=photo.name;
+  caption.appendChild(name);
+  if(photo.createdAt){
+    const date=document.createElement("time");
+    date.textContent=photo.createdAt;
+    caption.appendChild(date);
+  }
+  link.append(image,caption);
+  figure.appendChild(link);
+  return figure;
+}
+
+async function loadWeddingGallery(reset=false){
+  if(weddingGalleryLoading)return;
+  weddingGalleryLoading=true;
+  const status=$("weddingGalleryStatus");
+  const refresh=$("weddingGalleryRefresh");
+  const more=$("weddingGalleryLoadMore");
+  const gallery=$("weddingGallery");
+  const requestedToken=reset?"":weddingGalleryPageToken;
+  refresh.disabled=true;
+  more.disabled=true;
+  refresh.textContent="Atualizando…";
+  if(!reset)more.textContent="Carregando…";
+  status.textContent=gallery.childElementCount?"Carregando fotos…":"Carregando o memorial…";
+  try{
+    const result=await challengeApiRequest({action:"weddingGallery",pageToken:requestedToken});
+    if(result.error)throw new Error(result.error);
+    if(typeof result.configured!=="boolean"||!Array.isArray(result.photos)||
+        typeof result.nextPageToken!=="string"){
+      throw new Error("O memorial retornou uma resposta inválida.");
+    }
+    const photos=result.photos.map(photo=>{
+      if(!photo||typeof photo.id!=="string"||!/^[A-Za-z0-9_-]{5,200}$/.test(photo.id)||
+          typeof photo.name!=="string"||!photo.name.trim()||photo.name.length>200||
+          typeof photo.createdAt!=="string"){
+        throw new Error("Uma das fotos do memorial está inválida.");
+      }
+      return photo;
+    });
+    if(reset)loadedWeddingGalleryPhotoIds=new Set();
+    const fragment=document.createDocumentFragment();
+    for(const photo of photos){
+      if(loadedWeddingGalleryPhotoIds.has(photo.id))continue;
+      fragment.appendChild(createWeddingGalleryCard(photo));
+      loadedWeddingGalleryPhotoIds.add(photo.id);
+    }
+    if(reset)gallery.replaceChildren();
+    gallery.appendChild(fragment);
+    weddingGalleryPageToken=result.nextPageToken;
+    more.hidden=!weddingGalleryPageToken;
+    if(!result.configured){
+      status.textContent="O memorial está sendo preparado. As fotos aparecerão aqui assim que o fotógrafo as enviar.";
+    }else if(!gallery.childElementCount){
+      status.textContent="As fotos aparecerão aqui assim que forem enviadas pelo fotógrafo.";
+    }else if(!photos.length){
+      status.textContent="Não há mais fotos para exibir.";
+    }else{
+      status.textContent=`Fotos carregadas: ${gallery.childElementCount}.`;
+    }
+  }catch(error){
+    const message=error instanceof Error?error.message:"";
+    status.textContent=message==="Ação inválida."
+      ?"O memorial ainda está sendo conectado. Tente novamente em instantes."
+      :`Não foi possível carregar o memorial. ${message||"Tente novamente."}`;
+  }finally{
+    weddingGalleryLoading=false;
+    refresh.disabled=false;
+    more.disabled=false;
+    refresh.textContent="Atualizar memorial";
+    more.textContent="Carregar mais fotos";
+  }
+}
+
+function loadGuestChallenges(name){
+  return challengeApiRequest({action:"guestChallenges",name});
+}
+
+function loadGuestCollage(name){
+  return challengeApiRequest({action:"guestCollage",name});
+}
+
+function hasCompletedEveryChallenge(state){
+  const completed=new Set(state.completedChallengeIds);
+  return state.challenges.length>0&&state.challenges.every(challenge=>completed.has(challenge.id));
+}
+
+async function loadAndRenderGuestCollage(state){
+  const collage=$("guestCollage");
+  if(!hasCompletedEveryChallenge(state)){
+    collage.hidden=true;
+    activeCollagePhotos=[];
+    $("guestCollageGrid").replaceChildren();
+    $("guestCollageStatus").textContent="";
+    return;
+  }
+  const guestName=state.name;
+  collage.hidden=false;
+  $("guestCollageTitle").textContent=`${C.noiva} & ${C.noivo}`;
+  $("guestCollageDate").textContent=`${C.dataTexto} · ${C.cidade}`;
+  $("guestCollageStatus").textContent="Preparando sua lembrança…";
+  $("guestCollageGrid").replaceChildren();
+  try{
+    const result=await loadGuestCollage(guestName);
+    if(activeGuestName!==guestName||$("guestDashboard").hidden)return;
+    if(result.locked){
+      lockChallengeSection(result.message||"Os desafios ainda não foram liberados.");
+      return;
+    }
+    if(result.error)throw new Error(result.error);
+    if(!result.ready||!Array.isArray(result.photos)||result.photos.length!==state.challenges.length){
+      throw new Error("Ainda não foi possível montar a colagem completa.");
+    }
+    const photos=new Map(result.photos.map(photo=>[photo.challengeId,photo]));
+    const collagePhotos=state.challenges.map(challenge=>{
+      const photo=photos.get(challenge.id);
+      if(!photo||!["image/jpeg","image/png","image/webp"].includes(photo.mimeType)||
+          typeof photo.base64!=="string"||photo.base64.length>1400000||
+          !/^[A-Za-z0-9+/]+={0,2}$/.test(photo.base64)){
+        throw new Error("Uma das imagens da colagem está inválida.");
+      }
+      return {
+        title:challenge.title,
+        src:`data:${photo.mimeType};base64,${photo.base64}`
+      };
+    });
+    for(let index=collagePhotos.length-1;index>0;index--){
+      const swapIndex=Math.floor(Math.random()*(index+1));
+      [collagePhotos[index],collagePhotos[swapIndex]]=[collagePhotos[swapIndex],collagePhotos[index]];
+    }
+    activeCollagePhotos=collagePhotos;
+    const grid=$("guestCollageGrid");
+    for(const photo of collagePhotos){
+      const figure=document.createElement("figure");
+      figure.className="collage-item";
+      const image=document.createElement("img");
+      image.src=photo.src;
+      image.alt=`Foto do desafio: ${photo.title}`;
+      const caption=document.createElement("figcaption");
+      caption.textContent=photo.title;
+      figure.append(image,caption);
+      grid.appendChild(figure);
+    }
+    $("guestCollageStatus").textContent="";
+  }catch(error){
+    if(activeGuestName!==guestName||$("guestDashboard").hidden)return;
+    activeCollagePhotos=[];
+    $("guestCollageGrid").replaceChildren();
+    $("guestCollageStatus").textContent=error instanceof Error?error.message:"Não foi possível carregar sua colagem.";
+  }
+}
+
+function drawStoryPhoto(ctx,image,x,y,width,height,title,rotation){
+  ctx.save();
+  ctx.translate(x+width/2,y+height/2);
+  ctx.rotate(rotation);
+  ctx.shadowColor="#3e2a1e35";
+  ctx.shadowBlur=14;
+  ctx.shadowOffsetY=8;
+  ctx.fillStyle="#fff";
+  ctx.fillRect(-width/2,-height/2,width,height);
+  ctx.shadowColor="transparent";
+  const imageX=-width/2+12;
+  const imageY=-height/2+12;
+  const imageWidth=width-24;
+  const imageHeight=width*0.75;
+  const scale=Math.max(imageWidth/image.naturalWidth,imageHeight/image.naturalHeight);
+  const sourceWidth=imageWidth/scale;
+  const sourceHeight=imageHeight/scale;
+  ctx.drawImage(image,
+    (image.naturalWidth-sourceWidth)/2,(image.naturalHeight-sourceHeight)/2,
+    sourceWidth,sourceHeight,imageX,imageY,imageWidth,imageHeight);
+  ctx.fillStyle="#5a3825";
+  ctx.font='italic 20px "Bodoni Moda", Georgia, serif';
+  ctx.textAlign="center";
+  ctx.fillText(title,-width/2+width/2,height/2-12,width-24);
+  ctx.restore();
+}
+
+async function downloadGuestCollageForStories(){
+  const button=$("downloadGuestCollage");
+  const status=$("guestCollageStatus");
+  if(activeCollagePhotos.length!==10){
+    status.textContent="A colagem ainda não está pronta para baixar.";
+    return;
+  }
+  button.disabled=true;
+  button.textContent="Preparando imagem…";
+  status.textContent="Preparando a arte vertical para Stories…";
+  try{
+    if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+    const images=await Promise.all(activeCollagePhotos.map(photo=>new Promise((resolve,reject)=>{
+      const image=new Image();
+      image.onload=()=>resolve(image);
+      image.onerror=()=>reject(new Error("Não foi possível carregar uma das fotos da colagem."));
+      image.src=photo.src;
+    })));
+    const canvas=document.createElement("canvas");
+    canvas.width=1080;
+    canvas.height=1920;
+    const context=canvas.getContext("2d");
+    if(!context)throw new Error("Não foi possível preparar a imagem para baixar.");
+    const background=context.createLinearGradient(0,0,1080,1920);
+    background.addColorStop(0,"#f8eee5");
+    background.addColorStop(1,"#f4ece4");
+    context.fillStyle=background;
+    context.fillRect(0,0,canvas.width,canvas.height);
+    context.strokeStyle="#a47148";
+    context.lineWidth=3;
+    context.strokeRect(38,38,1004,1844);
+    context.lineWidth=1;
+    context.strokeRect(52,52,976,1816);
+    context.textAlign="center";
+    context.fillStyle="#a47148";
+    context.font='34px "DM Sans", Arial, sans-serif';
+    context.fillText("✦  ♥  ✦",540,118);
+    context.fillStyle="#7d6455";
+    context.font='20px "DM Sans", Arial, sans-serif';
+    context.fillText("UMA LEMBRANÇA DA NOSSA FESTA",540,174);
+    context.fillStyle="#5a3825";
+    context.font='italic 500 68px "Bodoni Moda", Georgia, serif';
+    context.fillText(`${C.noiva} & ${C.noivo}`,540,260,960);
+    context.fillStyle="#7d6455";
+    context.font='22px "DM Sans", Arial, sans-serif';
+    context.fillText(`${C.dataTexto} · ${C.cidade}`,540,310);
+    context.fillStyle="#a47148";
+    context.font='italic 30px "Bodoni Moda", Georgia, serif';
+    context.fillText("Cada foto, uma história para guardar",540,374);
+    const cardWidth=300;
+    const cardHeight=274;
+    const startX=48;
+    const startY=420;
+    const gapX=42;
+    const gapY=28;
+    const rotations=[-0.045,0.035,-0.025,0.05,-0.04,0.025,-0.015,0.04,-0.035,0.02];
+    images.forEach((image,index)=>{
+      const column=index%3;
+      const row=Math.floor(index/3);
+      drawStoryPhoto(
+        context,image,
+        startX+(row===3?1:column)*(cardWidth+gapX),
+        startY+row*(cardHeight+gapY),
+        cardWidth,cardHeight,
+        activeCollagePhotos[index].title,rotations[index]
+      );
+    });
+    context.fillStyle="#5a3825";
+    context.font='italic 30px "Bodoni Moda", Georgia, serif';
+    context.fillText("Obrigado por fazer parte da nossa história.",540,1694,900);
+    context.fillStyle="#a47148";
+    context.font='28px "DM Sans", Arial, sans-serif';
+    context.fillText("♥",540,1760);
+    const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+    if(!blob)throw new Error("Não foi possível gerar o arquivo PNG da colagem.");
+    const url=URL.createObjectURL(blob);
+    const link=document.createElement("a");
+    link.href=url;
+    link.download="ana-clara-felipe-colagem-stories.png";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+    status.textContent="Colagem baixada em formato vertical para Stories.";
+  }catch(error){
+    status.textContent=error instanceof Error?error.message:"Não foi possível baixar a colagem.";
+  }finally{
+    button.disabled=false;
+    button.textContent="Baixar imagem para Stories";
+  }
+}
+
+function refreshOverallChallengeProgress(){
+  if(!isChallengeEventDay()){
+    lockChallengeSection("Os desafios serão liberados somente no dia da festa.");
+    return;
+  }
+  challengeApiRequest({action:"challengeProgress"}).then(result=>{
+    if(result.locked){
+      lockChallengeSection(result.message||"Os desafios ainda não foram liberados.");
+      return;
+    }
+    if(result.error)throw new Error(result.error);
+    showChallengeContent();
+    $("collectiveProgress").value=result.percent;
+    $("collectiveProgressText").textContent=`${result.percent}% concluídos no total`;
+  }).catch(error=>{
+    lockChallengeSection(error instanceof Error?error.message:"Não foi possível verificar a liberação dos desafios.");
+  });
+}
+
+function updateGuestProgress(state,preserveProgress=false){
+  const completed=new Set(state.completedChallengeIds);
+  const assigned=state.challenges;
+  let done=assigned.filter(challenge=>completed.has(challenge.id)).length;
+  let collective=state.overallProgress.percent;
+  if(preserveProgress){
+    done=Math.max(done,Math.round(Number($("guestProgress").value)*assigned.length/100));
+    collective=Math.max(collective,Number($("collectiveProgress").value));
+  }
+  $("guestWelcome").textContent=`Desafios de ${state.name}`;
+  $("guestProgressText").textContent=`Seu progresso: ${done} de ${assigned.length} (${Math.round(done/assigned.length*100)}%)`;
+  $("guestProgress").value=Math.round(done/assigned.length*100);
+  $("collectiveProgress").value=collective;
+  $("collectiveProgressText").textContent=`${collective}% concluídos no total`;
+}
+
+function renderGuestChallenges(state){
+  updateGuestProgress(state);
+  const completed=new Set(state.completedChallengeIds);
+  const assigned=state.challenges;
+  const list=$("guestChallengeList");
+  list.replaceChildren();
+  for(const challenge of assigned){
+    const card=document.createElement("article");
+    card.className="challenge-card";
+    const title=document.createElement("h3");
+    title.textContent=challenge.title;
+    const description=document.createElement("p");
+    description.textContent=challenge.description;
+    const preview=createChallengePhotoPreview(challenge,challengePreviewUrls.get(challenge.id));
+    if(completed.has(challenge.id)){
+      const doneText=document.createElement("p");
+      doneText.textContent="Desafio concluído — foto recebida pelos noivos.";
+      card.append(title,description);
+      if(!preview.element.hidden)card.appendChild(preview.element);
+      card.appendChild(doneText);
+    }else{
+      const upload=document.createElement("div");
+      upload.className="challenge-upload";
+      const label=document.createElement("label");
+      label.textContent="Escolha uma foto (JPEG, PNG ou WebP; até 10 MB)";
+      const input=document.createElement("input");
+      input.type="file";input.accept="image/jpeg,image/png,image/webp";input.setAttribute("aria-label",`Foto para ${challenge.title}`);
+      input.addEventListener("change",()=>updateChallengePhotoPreview(challenge,input,preview));
+      label.appendChild(input);
+      const button=document.createElement("button");
+      button.type="button";button.textContent="Enviar foto";
+      button.addEventListener("click",()=>uploadChallengePhoto(challenge,input,button));
+      upload.append(label,button);
+      card.append(title,description,upload,preview.element);
+    }
+    list.appendChild(card);
+  }
+}
+
+function createChallengePhotoPreview(challenge,url){
+  const element=document.createElement("figure");
+  element.className="challenge-photo-preview";
+  element.hidden=!url;
+  const image=document.createElement("img");
+  image.alt=`Miniatura da foto para ${challenge.title}`;
+  if(url)image.src=url;
+  const caption=document.createElement("figcaption");
+  caption.textContent="Prévia local, visível apenas neste navegador.";
+  element.append(image,caption);
+  return {element,image};
+}
+
+function updateChallengePhotoPreview(challenge,input,preview){
+  const previousUrl=challengePreviewUrls.get(challenge.id);
+  if(previousUrl){
+    URL.revokeObjectURL(previousUrl);
+    challengePreviewUrls.delete(challenge.id);
+  }
+  const file=input.files[0];
+  if(!file||!["image/jpeg","image/png","image/webp"].includes(file.type)||file.size>10*1024*1024){
+    preview.element.hidden=true;
+    return;
+  }
+  const url=URL.createObjectURL(file);
+  challengePreviewUrls.set(challenge.id,url);
+  preview.image.src=url;
+  preview.element.hidden=false;
+}
+
+function clearChallengePhotoPreviews(){
+  for(const url of challengePreviewUrls.values())URL.revokeObjectURL(url);
+  challengePreviewUrls.clear();
+}
+
+async function compressChallengePhoto(file){
+  if(!["image/jpeg","image/png","image/webp"].includes(file.type))throw new Error("Escolha uma foto JPEG, PNG ou WebP.");
+  if(file.size>10*1024*1024)throw new Error("A foto precisa ter menos de 10 MB.");
+  const bitmap=await createImageBitmap(file);
+  const scale=Math.min(1,1600/Math.max(bitmap.width,bitmap.height));
+  const canvas=document.createElement("canvas");
+  canvas.width=Math.round(bitmap.width*scale);canvas.height=Math.round(bitmap.height*scale);
+  canvas.getContext("2d").drawImage(bitmap,0,0,canvas.width,canvas.height);
+  bitmap.close();
+  for(const quality of [0.82,0.68,0.54]){
+    const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/jpeg",quality));
+    if(blob&&blob.size<=MAX_PHOTO_BYTES)return blob;
+  }
+  throw new Error("Não foi possível reduzir a foto. Escolha uma imagem menor.");
+}
+
+async function createChallengeThumbnail(photo){
+  const bitmap=await createImageBitmap(photo);
+  try{
+    const scale=Math.min(1,360/Math.max(bitmap.width,bitmap.height));
+    const canvas=document.createElement("canvas");
+    canvas.width=Math.round(bitmap.width*scale);canvas.height=Math.round(bitmap.height*scale);
+    canvas.getContext("2d").drawImage(bitmap,0,0,canvas.width,canvas.height);
+    for(const quality of [0.72,0.58,0.45]){
+      const thumbnail=await new Promise(resolve=>canvas.toBlob(resolve,"image/jpeg",quality));
+      if(thumbnail&&thumbnail.size<=MAX_THUMBNAIL_BYTES)return thumbnail;
+    }
+  }finally{
+    bitmap.close();
+  }
+  throw new Error("Não foi possível criar a miniatura desta foto.");
+}
+
+function readBlobAsBase64(blob){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onload=()=>resolve(String(reader.result).split(",")[1]);
+    reader.onerror=()=>reject(new Error("Não foi possível ler o arquivo de foto."));
+    reader.readAsDataURL(blob);
+  });
+}
+
+async function loginGuest(){
+  if(!isChallengeEventDay()){
+    lockChallengeSection("Os desafios serão liberados somente no dia da festa.");
+    return;
+  }
+  const name=$("guestLoginName").value.trim();
+  const status=$("guestLoginStatus");
+  if(!name){$("guestLoginName").focus();status.textContent="Digite o nome usado na confirmação.";return}
+  status.textContent="Carregando seus desafios…";
+  try{
+    const state=await loadGuestChallenges(name);
+    if(state.locked){
+      lockChallengeSection(state.message||"Os desafios ainda não foram liberados.");
+      return;
+    }
+    if(state.error)throw new Error(state.error);
+    activeGuestName=state.name;
+    renderGuestChallenges(state);
+    $("guestDashboard").hidden=false;
+    $("guestLoginBox").hidden=true;
+    status.textContent="";
+    await loadAndRenderGuestCollage(state);
+  }catch(error){
+    status.textContent=error instanceof Error?error.message:"Não foi possível localizar seus desafios.";
+  }
+}
+
+function logoutGuest(){
+  activeGuestName="";
+  activeCollagePhotos=[];
+  clearChallengePhotoPreviews();
+  $("guestDashboard").hidden=true;
+  $("guestLoginBox").hidden=false;
+  $("guestLoginName").value="";
+  $("photoConsent").checked=false;
+  $("challengeStatus").textContent="";
+  $("guestChallengeList").replaceChildren();
+  $("guestCollage").hidden=true;
+  $("guestCollageStatus").textContent="";
+  $("guestCollageGrid").replaceChildren();
+}
+
+async function uploadChallengePhoto(challenge,input,button){
+  const status=$("challengeStatus");
+  if(!isChallengeEventDay()){
+    lockChallengeSection("Os desafios estão disponíveis somente no dia da festa.");
+    return;
+  }
+  const file=input.files[0];
+  if(!$("photoConsent").checked){status.textContent="Confirme que tem autorização para enviar esta foto aos noivos.";return}
+  if(!file){status.textContent="Escolha uma foto antes de enviar.";input.focus();return}
+  if(!C.googleSheetsWebAppUrl||C.googleSheetsWebAppUrl.startsWith("COLE_")){
+    status.textContent="Os desafios ainda não foram conectados ao Apps Script.";return;
+  }
+  button.disabled=true;button.textContent="Enviando foto…";status.textContent="";
+  try{
+    const photo=await compressChallengePhoto(file);
+    const thumbnail=await createChallengeThumbnail(photo);
+    const [base64,thumbnailBase64]=await Promise.all([
+      readBlobAsBase64(photo),
+      readBlobAsBase64(thumbnail)
+    ]);
+    await fetch(C.googleSheetsWebAppUrl,{method:"POST",mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=UTF-8"},
+      body:JSON.stringify({action:"uploadIndividualChallengePhoto",guestName:activeGuestName,challengeId:challenge.id,mimeType:"image/jpeg",base64,thumbnailBase64})});
+    const state=await loadGuestChallenges(activeGuestName);
+    if(state.locked){
+      lockChallengeSection(state.message||"Os desafios ainda não foram liberados.");
+      return;
+    }
+    if(state.error)throw new Error(state.error);
+    if(state.completedChallengeIds.includes(challenge.id)){
+      updateGuestProgress(state,true);
+      const card=button.closest(".challenge-card");
+      button.closest(".challenge-upload").remove();
+      const doneText=document.createElement("p");
+      doneText.textContent="Desafio concluído — foto recebida pelos noivos.";
+      card.appendChild(doneText);
+      status.textContent="Foto recebida. Desafio concluído!";
+      input.value="";
+      await loadAndRenderGuestCollage(state);
+    }else{
+      status.textContent="O envio terminou, mas não consegui confirmar a conclusão. Atualize o Apps Script e tente novamente.";
+    }
+  }catch(error){
+    status.textContent=`Não foi possível concluir o desafio. ${error instanceof Error?error.message:"Verifique a conexão e tente novamente."}`;
+  }finally{
+    button.disabled=false;button.textContent="Enviar foto";
+  }
+}
+
+document.title=`${C.noiva} & ${C.noivo} — Nosso casamento`;
+$("nomes").innerHTML=`${C.noiva}<br>&amp; ${C.noivo}<span>vão se casar</span>`;
+$("dataLocal").textContent=`${C.dataTexto} · ${C.cidade}`;
+$("historiaTxt").innerHTML=C.historia.map(p=>`<p>${p}</p>`).join("");
+$("localNome").textContent=C.localNome; $("localEnd").textContent=C.localEnd; $("mapa").href=C.mapaUrl;
+$("traje").textContent=C.traje; $("recNome").textContent=C.recNome; $("recEnd").textContent=C.recEnd;
+$("recMapa").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(C.recNome+" "+C.recEnd);
+$("presentesTxt").textContent=C.presentesTxt; $("pixKey").textContent=C.pix;
+$("guestLogin").onclick=loginGuest;
+$("guestLoginName").onkeydown=e=>{if(e.key==="Enter")loginGuest()};
+$("guestLogout").onclick=logoutGuest;
+$("downloadGuestCollage").onclick=downloadGuestCollageForStories;
+$("weddingGalleryRefresh").onclick=()=>loadWeddingGallery(true);
+$("weddingGalleryLoadMore").onclick=()=>loadWeddingGallery();
+loadWeddingGallery(true);
+refreshOverallChallengeProgress();
+setInterval(()=>{
+  if(!isChallengeEventDay()){
+    lockChallengeSection("Os desafios serão liberados somente no dia da festa.");
+  }else if($("challengeContent").hidden){
+    refreshOverallChallengeProgress();
+  }
+},60000);
+const G=C.presentes.flatMap(g=>g.itens);
+$("gifts").innerHTML=`<div class="gifts-grid">${G.map(([n,v],i)=>`<div class="gift"><p><strong>${n}</strong></p><p class="v">R$ ${v.toLocaleString("pt-BR")}</p><button type="button" data-i="${i}">Presentear</button></div>`).join("")}</div>`;
+const IP=C.infinitepay;
+$("gifts").onclick=async e=>{const b=e.target.closest("button");if(!b)return;const [n,v]=G[b.dataset.i];
+  if(!IP.handle||IP.handle.startsWith("SUA_")){
+    $("copiado").textContent="Configure sua InfiniteTag em C.infinitepay.handle para habilitar o pagamento.";
+    return;
+  }
+  const originalText=b.textContent;b.disabled=true;b.textContent="Abrindo pagamento…";
+  $("copiado").textContent="";
+  try{
+    const r=await fetch("https://api.checkout.infinitepay.io/links",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({handle:IP.handle,order_nsu:`presente-${Date.now()}`,...(IP.redirectUrl?{redirect_url:IP.redirectUrl}:{}),
+        items:[{quantity:1,price:Math.round(v*100),description:`${n} — Casamento ${C.noiva} e ${C.noivo}`}]})});
+    if(!r.ok){
+      const detail=(await r.text()).slice(0,240);
+      throw new Error(`A InfinitePay retornou o erro ${r.status}${detail?`: ${detail}`:"."}`);
+    }
+    const d=await r.json();
+    if(typeof d.url!=="string")throw new Error("A InfinitePay não retornou o link de pagamento.");
+    const checkoutUrl=new URL(d.url);
+    if(checkoutUrl.protocol!=="https:")throw new Error("O link de pagamento recebido não é seguro.");
+    location.assign(checkoutUrl.href);
+  }catch(error){
+    $("copiado").textContent=`Não foi possível abrir o pagamento pela InfinitePay. ${error instanceof Error?error.message:"Tente novamente."}`;
+    b.disabled=false;b.textContent=originalText;
+  }};
+$("prazo").textContent=C.prazo; $("rodape").textContent=`${C.noiva} e ${C.noivo}`;
+
+function tick(){const ms=new Date(C.data)-new Date();
+  if(ms<=0){$("count").innerHTML="<p>Hoje é o grande dia!</p>";return}
+  $("count").innerHTML=[[Math.floor(ms/864e5),"dias"],[Math.floor(ms/36e5)%24,"horas"],[Math.floor(ms/6e4)%60,"min"],[Math.floor(ms/1000)%60,"segundos"]]
+    .map(([n,l])=>`<div><b>${n}</b><small>${l}</small></div>`).join("")}
+tick(); setInterval(tick,1000);
+
+$("copiar").onclick=async()=>{try{await navigator.clipboard.writeText(C.pix);$("copiado").textContent="Chave copiada. Obrigado!"}
+  catch{$("copiado").textContent="Não deu para copiar. Selecione a chave acima e copie manualmente."}};
+const updateAcompanhantesField=()=>{
+  const show=$("vai").value==="Sim, estarei lá"&&Number($("qtd").value)>1;
+  $("acompanhantesField").hidden=!show;
+  if(!show)$("acompanhantes").value="";
+};
+$("qtd").oninput=updateAcompanhantesField;
+$("vai").onchange=updateAcompanhantesField;
+updateAcompanhantesField();
+$("enviar").onclick=async()=>{
+  const n=$("nome").value.trim(),qtd=Number($("qtd").value),vai=$("vai").value;
+  const acompanhantes=$("acompanhantes").value.split(/\r?\n/).map(nome=>nome.trim()).filter(Boolean);
+  const status=$("rsvpStatus"),button=$("enviar");
+  if(!n){$("nome").focus();status.textContent="Informe seu nome.";return}
+  if(!Number.isInteger(qtd)||qtd<1||qtd>10){$("qtd").focus();status.textContent="Informe uma quantidade entre 1 e 10.";return}
+  if(vai==="Sim, estarei lá"&&acompanhantes.length!==qtd-1){
+    $("acompanhantes").focus();
+    status.textContent=`Informe o nome de cada acompanhante, um por linha (${qtd-1}).`;
+    return;
+  }
+  if(vai==="Sim, estarei lá"){
+    const names=[n,...acompanhantes].map(name=>name.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/\s+/g," ").trim());
+    if(new Set(names).size!==names.length){
+      $("acompanhantes").focus();
+      status.textContent="Cada pessoa precisa de um nome completo diferente.";
+      return;
+    }
+  }
+  if(!C.googleSheetsWebAppUrl||C.googleSheetsWebAppUrl.startsWith("COLE_")){
+    status.textContent="A planilha ainda não foi conectada. Configure a URL do Apps Script no site.";
+    return;
+  }
+  button.disabled=true;button.textContent="Enviando…";status.textContent="";
+  try{
+    const request=fetch(C.googleSheetsWebAppUrl,{method:"POST",mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=UTF-8"},
+      body:JSON.stringify({name:n,attendance:vai,people:qtd,guests:acompanhantes})});
+    const mensagem=`Olá! Aqui é ${n}. ${vai}. Pessoas: ${qtd}.${acompanhantes.length?` Acompanhantes: ${acompanhantes.join(", ")}.`:""}`;
+    window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(mensagem)}`,"_blank","noopener");
+    await request;
+    status.textContent="Solicitação enviada. Confira se a resposta apareceu na planilha; o WhatsApp também foi aberto.";
+    if(vai==="Sim, estarei lá")refreshOverallChallengeProgress();
+  }catch(error){
+    status.textContent=`Não foi possível enviar à planilha. ${error instanceof Error?error.message:"Verifique sua conexão e tente novamente."}`;
+  }finally{
+    button.disabled=false;button.textContent="Enviar confirmação";
+  }
+};
+</script>
+</body>
+</html>
